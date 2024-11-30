@@ -18,15 +18,32 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     document.getElementById("contactForm").reset();
 });
 
-// Simple Family Tree - Placeholder Example
+// KAILEL Family Tree - Updated without Joseph N Mwangi
 const familyTree = {
     name: "KAILEL Family",
     children: [
-        { name: "Joseph N Mwangi", children: [{ name: "Child 1" }, { name: "Child 2" }] },
-        { name: "Family Member 2", children: [] }
+        { 
+            name: "Langat Gilbert (Group Admin)",
+            children: [
+                { name: "Family Member 1" },
+                { name: "Family Member 2" }
+            ]
+        },
+        { 
+            name: "Family Member 3",
+            children: [
+                { name: "Child 1" },
+                { name: "Child 2" }
+            ]
+        },
+        { 
+            name: "Family Member 4",
+            children: []
+        }
     ]
 };
 
+// Recursive function to display family tree
 function createFamilyTree(member) {
     const div = document.createElement("div");
     div.classList.add("tree-node");
@@ -44,4 +61,5 @@ function createFamilyTree(member) {
     return div;
 }
 
+// Append the family tree to the tree container
 document.getElementById("treeContainer").appendChild(createFamilyTree(familyTree));
