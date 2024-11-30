@@ -1,104 +1,186 @@
-/* Basic resets */
+/* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Header */
 header {
-    background-color: #0066cc;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  border-bottom: 5px solid #fff;
 }
 
 header h1 {
-    font-size: 36px;
+  font-size: 3em;
+  margin-bottom: 20px;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+header p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
-nav ul li {
-    margin: 0 15px;
+header .cta-button {
+  background-color: #ff5733;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.1em;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+header .cta-button:hover {
+  background-color: #e04e2c;
 }
 
-/* Section styling */
-section {
-    padding: 20px;
-    margin: 20px;
+/* About Us */
+#about {
+  background-color: #ffffff;
+  padding: 40px 0;
+  border-bottom: 2px solid #ddd;
+}
+
+#about h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #00796b;
+}
+
+#about p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Family Members */
+#family-members {
+  padding: 40px 0;
+}
+
+#family-members h2 {
+  font-size: 2.5em;
+  color: #0277bd;
+  margin-bottom: 20px;
+}
+
+#family-members .member {
+  background-color: #e1f5fe;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#family-members .member h3 {
+  font-size: 1.8em;
+  color: #d32f2f;
+}
+
+#family-members p {
+  font-size: 1.1em;
 }
 
 /* Gallery */
-.gallery {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+#gallery {
+  padding: 40px 0;
+  background-color: #ffffff;
 }
 
-.image-container {
-    width: 30%;
-    margin: 10px 0;
+#gallery h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #8e24aa;
 }
 
-.image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+#gallery .images img {
+  width: 300px;
+  height: auto;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Form */
+#gallery .images img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+/* Family Motto */
+#motto {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+#motto h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #388e3c;
+}
+
+/* Contact Us */
+#contact {
+  background-color: #f1f8e9;
+  padding: 40px 0;
+}
+
+#contact h2 {
+  font-size: 2.5em;
+  color: #0288d1;
+  margin-bottom: 20px;
+}
+
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: auto;
+  display: grid;
+  gap: 20px;
+}
+
+form label {
+  font-size: 1.1em;
 }
 
 form input,
 form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
 }
 
 form button {
-    padding: 10px;
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1em;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
 form button:hover {
-    background-color: #004d99;
+  background-color: #45a049;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+  background-color: #00796b;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
