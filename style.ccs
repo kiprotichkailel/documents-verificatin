@@ -51,16 +51,16 @@ h1, h2, h3 {
     margin: 10px 0;
 }
 
-/* Remove underline from specific links */
+/* No Underline and Green Links */
 #documents .document-category a {
     text-decoration: none; /* No underlining */
-    color: #3498db; /* Link color */
+    color: #2ecc71; /* Green link color */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 #documents .document-category a:hover {
-    color: #2c3e50; /* Darken the link color on hover */
+    color: #27ae60; /* Darker green on hover */
 }
 
 /* Mission, Vision, and Objectives */
