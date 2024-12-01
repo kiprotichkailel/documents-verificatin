@@ -38,6 +38,21 @@ body {
     color: #3498DB;
 }
 
+#home {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: #3498DB;
+    color: white;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+}
+
+#home p {
+    font-size: 1.5rem;
+}
+
 #documents {
     padding: 4rem 2rem;
     background-color: #fff;
@@ -45,6 +60,16 @@ body {
 
 .document-list {
     margin-top: 2rem;
+}
+
+.document-category {
+    margin-bottom: 2rem;
+}
+
+.document-category h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #3498DB;
 }
 
 .document-item {
