@@ -1,70 +1,125 @@
-// Smooth scrolling function for navigation links
-function scrollToSection(sectionId) {
-    // Find the section by its ID and scroll to it smoothly
-    document.getElementById(sectionId).scrollIntoView({
-        behavior: 'smooth'
-    });
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KAILEL KIPROTICH - Document Repository</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <h1>KAILEL KIPROTICH</h1>
+            <p>Document Repository</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#documents">Documents</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-// Add active class to the current navigation link
-function setActiveLink(targetId) {
-    const navLinks = document.querySelectorAll('.navbar nav ul li a');
-    navLinks.forEach(link => {
-        link.classList.remove('active'); // Remove active class from all links
-    });
-    const activeLink = document.querySelector(`.navbar nav ul li a[href="#${targetId}"]`);
-    if (activeLink) {
-        activeLink.classList.add('active'); // Add active class to the clicked link
-    }
-}
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Hi, Welcome to KAILEL KIPROTICH Document Repository</h1>
+        <p>We offer the following services for document verification and management.</p>
+    </section>
 
-// Scroll to top button functionality
-function toggleScrollTopButton() {
-    const scrollTopButton = document.getElementById('scrollTopButton');
-    if (window.scrollY > 300) {
-        scrollTopButton.style.display = 'block';
-    } else {
-        scrollTopButton.style.display = 'none';
-    }
-}
+    <!-- Documents Section -->
+    <section id="documents">
+        <h2>Available Documents</h2>
 
-// Event listener for scroll to top button
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+        <!-- Business Documents -->
+        <div class="document-category">
+            <h3>Business Documents</h3>
+            <div class="document-item">
+                <a href="documents/business_1.pdf" download class="highlighted">Taxpayer Identification Number (e.g., KRA PIN)</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/business_2.pdf" download class="highlighted">Business Registration Certificate</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/business_3.pdf" download class="highlighted">Audited Financial Statements</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/business_4.pdf" download class="highlighted">Loan Agreements</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/business_5.pdf" download class="highlighted">Stock Certificates</a>
+            </div>
+        </div>
 
-// Event listener for each navigation link to trigger smooth scrolling
-document.addEventListener('DOMContentLoaded', function () {
-    // Get all navigation links
-    const navLinks = document.querySelectorAll('.navbar nav ul li a');
-    
-    // Add event listeners for smooth scrolling
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            // Prevent the default behavior of the link
-            event.preventDefault();
+        <!-- Personal Documents -->
+        <div class="document-category">
+            <h3>Personal Documents</h3>
+            <div class="document-item">
+                <a href="documents/personal_1.pdf" download class="highlighted">Recommendation Letters</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/personal_2.pdf" download class="highlighted">Attendance Records</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/personal_3.pdf" download class="highlighted">Utility Bills</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/personal_4.pdf" download class="highlighted">Rental Agreements</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/personal_5.pdf" download class="highlighted">Bank Statements</a>
+            </div>
+        </div>
 
-            // Get the target section ID from the link's href
-            const targetSection = link.getAttribute('href').substring(1); // Remove the '#' symbol
+        <!-- Academic Documents -->
+        <div class="document-category">
+            <h3>Academic Documents</h3>
+            <div class="document-item">
+                <a href="documents/academic_1.pdf" download class="highlighted">School Progress Reports</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/academic_2.pdf" download class="highlighted">Theses or Dissertations</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/academic_3.pdf" download class="highlighted">Research Publications</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/academic_4.pdf" download class="highlighted">Academic Awards</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/academic_5.pdf" download class="highlighted">Curriculum Vitae (CV)</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/academic_6.pdf" download class="highlighted">Internship Certificates</a>
+            </div>
+        </div>
 
-            // Call the scrollToSection function to scroll to the target section
-            scrollToSection(targetSection);
+        <!-- Research & Proposals -->
+        <div class="document-category">
+            <h3>Research & Proposals</h3>
+            <div class="document-item">
+                <a href="documents/research_1.pdf" download class="highlighted">Research Proposals</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/research_2.pdf" download class="highlighted">Statistical Analysis Reports</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/research_3.pdf" download class="highlighted">Field Study Reports</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/research_4.pdf" download class="highlighted">Peer-Reviewed Journal Articles</a>
+            </div>
+            <div class="document-item">
+                <a href="documents/research_5.pdf" download class="highlighted">Research Findings Summaries</a>
+            </div>
+        </div>
+    </section>
 
-            // Set the clicked link as the active link
-            setActiveLink(targetSection);
-        });
-    });
+    <footer>
+        <p>KAILEL KIPROTICH Document Repository</p>
+    </footer>
 
-    // Set up scroll event to show/hide scroll to top button
-    window.addEventListener('scroll', toggleScrollTopButton);
-
-    // Set initial active link based on the section the user is currently viewing
-    const currentSection = window.location.hash ? window.location.hash.substring(1) : 'home';
-    setActiveLink(currentSection);
-    
-    // Event listener for scroll to top button
-    const scrollTopButton = document.getElementById('scrollTopButton');
-    if (scrollTopButton) {
-        scrollTopButton.addEventListener('click', scrollToTop);
-    }
-});
+    <script src="scripts.js"></script>
+</body>
+</html>
