@@ -9,12 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
 
             // Get the target section ID from the href attribute
-            const sectionId = link.getAttribute('href').substring(1);
-
-            // Scroll to the corresponding section
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-});
+            const sectionId = link.get
